@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 9%;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+
+.header.active {
+    padding: 2rem 9%;
+    box-shadow: var(--box-shadow);
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    display: none;
+}
+
+.home {
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h3 {
+    color: var(--black);
+    font-size: 7.5vw;
+    text-transform: uppercase;
+}
+
+.home img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.heading {
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--black);
+}
+
+.about h4 {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.about-padding {
+    padding: 2em 4em;
+}
+
+.about p{
+    font-size: 15px;
+}
+
+.img-div {
+    position: relative;
+}
+
+.position-img {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+}
+
+.position-img1 {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    text-align: center;
+}
+
+.services .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--black);
+    color: var(--white);
+}
+
+.services .box-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.services .box-container .box p {
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
+
+.cars .cars-slider {
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.cars .cars-slider .box {
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.cars .cars-slider .box img {
+    height: 15rem;
+}
+
+.cars .cars-slider .box:hover img {
+    transform: scale(.9);
+}
+
+.cars .cars-slider .box .content h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.cars .cars-slider .box .content .price {
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.cars .cars-slider .box .content .price span {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.cars .cars-slider .box .content p {
+    font-size: 1.6rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    padding-top: 1.5rem;
+    border-top: var(--border);
+}
+
+.cars .cars-slider .box .content span {
+    font-size: 1rem;
+    color: var(--black);
+    padding: 0 .5rem;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row form {
+    padding: 2rem;
+    flex: 1 1 42rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.contact .row h3 {
+    font-size: 3rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.contact .row .col-md-6 {
+    text-align: center;
+}
+
+.contact .row form .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    border: var(--border);
+    margin: .7rem 0;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row form .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+}
+
+.contact .row a {
+    display: block;
+    font-size: 1.9rem;
+    padding: 1rem 0;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.contact .row a i {
+    padding-right: .5rem;
+    color: var(--black);
+}
+
+.footer {
+    background: var(--black);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: var(--white);
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: var(--white);
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: var(--border);
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.sell_car h4 {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.sell_car-padding {
+    padding: 2em 4em;
+}
+
+.sell_car p{
+    font-size: 15px;
+}
+
+.sell_car .img1{
+    height: 380px;
+    width: 570px;
+}
+
+.sell_car .img2{
+    height: 400px;
+    width: 300px;
+}
+
+.sell_form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.sell_form .row form {
+    padding: 2rem;
+    flex: 1 1 42rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.sell_form .row .col-lg-6 {
+    padding-top: 80px;
+    padding-left: 100px;
+}
+
+.sell_form .row form .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    border: var(--border);
+    margin: .7rem 0;
+}
+
+.sell_form .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.sell_form .row form .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+}
+
+.collection {
+    padding-top: 10rem;
+}
+
+.collection .row{
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.collection .row .card-view {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+.collection .row .card-view img {
+    height: 15rem;
+}
+
+.collection .row .card-view .details h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.collection .row .card-view .details .price {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.collection .row .card-view .details .price span {
+    color: var(--light-color);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.collection .row .card-view .details p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    padding-top: 1.5rem;
+    border-top: var(--border);
+}
+
+.collection .row .card-view .details span {
+    font-size: 1rem;
+    color: var(--black);
+    padding: 0 .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .header.active {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: block;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a {
+        margin: 2rem;
+        display: block;
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .about-page2 .gallery {
+        --num-cols: 2;
+        --row-height: 150px;
+    }
+}
